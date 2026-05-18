@@ -24,9 +24,3 @@ O projeto foi construído utilizando as ferramentas mais modernas do ecossistema
 *   **[Tailwind CSS](https://tailwindcss.com/):** Para a estilização rápida, responsiva e com um visual *dark space* elegante.
 *   **[Vite](https://vitejs.dev/):** Ferramenta de build ultra-rápida para o ambiente de desenvolvimento.
 *   **JSON Local:** Simulação de banco de dados através de um arquivo estático para popular o catálogo.
-
----
-
-## 📂 Como Iniciar o Projeto
-
-(Em breve)
