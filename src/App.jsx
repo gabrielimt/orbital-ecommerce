@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import Header from './components/Header'
 import productsData from './data/products.json'; 
+import Header from './components/Header'
 import Filters from './components/Filters';
 import ProductCard from './components/ProductCard';
+import Footer from './components/Footer'
 
 export default function App() {
   const [categorias, setCategorias] = useState([]);
@@ -58,6 +59,7 @@ export default function App() {
           <ProductCard produtos={produtosFiltrados} />
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
