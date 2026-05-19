@@ -3,180 +3,270 @@
     "nome": "Camiseta Buraco Negro de Gargantua",
     "preco": 59.90,
     "descricao": "Camiseta 100% algodão com estampa de alta definição da singularidade de um buraco negro.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Vestuário",
+    "cor": "Preto",
+    "em_estoque": true
   },
   {
     "nome": "Boné NASA Azul Marinho",
     "preco": 45.00,
     "descricao": "Boné ajustável com o logo clássico da NASA bordado na parte frontal.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Acessórios",
+    "cor": "Azul Marinho",
+    "em_estoque": true
   },
   {
     "nome": "Telescópio Refrator Iniciante 70mm",
     "preco": 350.00,
     "descricao": "Telescópio ideal para iniciantes na observação lunar e de planetas próximos, acompanha tripé.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Telescópios",
+    "cor": "Preto",
+    "em_estoque": true
   },
   {
     "nome": "Luminária Decorativa Nebulosa de Órion",
     "preco": 120.00,
     "descricao": "Luminária de mesa que projeta as cores vibrantes e nuvens de gás de uma nebulosa no seu quarto.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Decoração",
+    "cor": "Multicolorido",
+    "em_estoque": true
   },
   {
     "nome": "Pôster do Sistema Solar Vintage",
     "preco": 35.50,
     "descricao": "Pôster em papel kraft estilo retro com a disposição e dados dos planetas do nosso sistema solar.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Decoração",
+    "cor": "Marrom",
+    "em_estoque": true
   },
   {
     "nome": "Caneca Mágica Constelações do Zodíaco",
     "preco": 49.90,
     "descricao": "Caneca termossensível que revela o mapa estelar das constelações quando em contato com líquido quente.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Acessórios",
+    "cor": "Preto",
+    "em_estoque": true
   },
   {
     "nome": "Moletom Aglomerado de Galáxias Preto",
     "preco": 149.90,
     "descricao": "Moletom flanelado super quente com impressão full-print de um aglomerado galáctico profundo.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Vestuário",
+    "cor": "Preto",
+    "em_estoque": true
   },
   {
     "nome": "Globo de Plasma Científico 8 Polegadas",
     "preco": 89.90,
     "descricao": "Globo de vidro interativo que reage ao toque, demonstrando os princípios da física de plasmas.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Decoração",
+    "cor": "Transparente",
+    "em_estoque": true
   },
   {
     "nome": "Colar Pingente Fases da Lua Prata",
     "preco": 39.90,
     "descricao": "Colar unissex com pingente minimalista representando o ciclo lunar em liga de zinco.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Acessórios",
+    "cor": "Prata",
+    "em_estoque": false
   },
   {
     "nome": "Telescópio Refletor Newtoniano 114mm",
     "preco": 850.00,
     "descricao": "Equipamento avançado para observação de céu profundo, anéis de Saturno e crateras lunares com clareza.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Telescópios",
+    "cor": "Branco",
+    "em_estoque": false
   },
   {
     "nome": "Camiseta Missão Apollo 11 Branca",
     "preco": 55.00,
     "descricao": "Camiseta comemorativa da primeira missão tripulada a pousar na Lua em 1969.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Vestuário",
+    "cor": "Branco",
+    "em_estoque": true
   },
   {
     "nome": "Luminária de Mesa Lua Cheia 3D",
     "preco": 75.00,
     "descricao": "Luminária recarregável impressa em 3D com a topografia real da lua e opções de cores frias e quentes.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Decoração",
+    "cor": "Branco",
+    "em_estoque": false
   },
   {
     "nome": "Boné Bordado Planeta Saturno Preto",
     "preco": 42.00,
     "descricao": "Boné dad hat em sarja com um pequeno bordado detalhado do planeta Saturno e seus anéis.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Acessórios",
+    "cor": "Preto",
+    "em_estoque": true
   },
   {
     "nome": "Adesivos de Parede Estrelas Fluorescentes",
     "preco": 19.90,
     "descricao": "Kit com 100 estrelas e planetas que brilham no escuro, ideal para decoração de tetos.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Decoração",
+    "cor": "Verde",
+    "em_estoque": true
   },
   {
     "nome": "Caderno de Anotações Via Láctea",
     "preco": 28.50,
     "descricao": "Caderno tipo moleskine, folhas sem pauta, com capa dura ilustrando o braço espiral da Via Láctea.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Acessórios",
+    "cor": "Preto",
+    "em_estoque": true
   },
   {
     "nome": "Camiseta Astrofísica Teórica e Fórmulas",
     "preco": 65.00,
     "descricao": "Camiseta criativa estampada com equações famosas da gravidade e relatividade geral.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Vestuário",
+    "cor": "Cinza",
+    "em_estoque": false
   },
   {
     "nome": "Relógio de Parede Fases Lunares Moderno",
     "preco": 95.00,
     "descricao": "Relógio de parede silencioso onde cada hora do mostrador é representada por uma fase diferente da lua.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Decoração",
+    "cor": "Preto",
+    "em_estoque": true
   },
   {
     "nome": "Telescópio Dobsoniano 200mm",
     "preco": 3200.00,
     "descricao": "Telescópio de grande abertura com montagem base, excelente custo-benefício para ver galáxias distantes.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Telescópios",
+    "cor": "Branco",
+    "em_estoque": true
   },
   {
     "nome": "Mochila Espacial Traje Astronauta Branca",
     "preco": 180.00,
     "descricao": "Mochila resistente à água com design inspirado nos trajes espaciais de atividades extraveiculares.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Acessórios",
+    "cor": "Branco",
+    "em_estoque": true
   },
   {
     "nome": "Capa de Celular Superfície de Marte",
     "preco": 35.00,
     "descricao": "Capinha anti-impacto com textura e imagem em alta resolução do solo avermelhado de Marte.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Acessórios",
+    "cor": "Vermelho",
+    "em_estoque": true
   },
   {
     "nome": "Caneca Termossensível Eclipse Solar",
     "preco": 55.00,
     "descricao": "Ao adicionar café quente, a imagem do sol sendo coberto pela lua aparece magicamente na caneca.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Acessórios",
+    "cor": "Preto",
+    "em_estoque": true
   },
   {
     "nome": "Almofada Formato Astronauta Flutuante",
     "preco": 68.90,
     "descricao": "Almofada decorativa de pelúcia com formato recortado de um astronauta flutuando no vácuo.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Decoração",
+    "cor": "Branco",
+    "em_estoque": true
   },
   {
     "nome": "Camiseta Constelação de Órion Minimalista",
     "preco": 59.90,
     "descricao": "Camiseta preta com a silhueta geométrica da constelação de Órion, incluindo as Três Marias.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Vestuário",
+    "cor": "Preto",
+    "em_estoque": true
   },
   {
     "nome": "Boné Logo SpaceX Preto",
     "preco": 49.90,
     "descricao": "Boné aba curva com a logo X minimalista da SpaceX, ideal para fãs de exploração aeroespacial.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Acessórios",
+    "cor": "Preto",
+    "em_estoque": true
   },
   {
     "nome": "Quebra-Cabeça Nebulosa de Órion 1000 peças",
     "preco": 110.00,
     "descricao": "Desafio galáctico de 1000 peças com uma das mais belas imagens capturadas pelo Hubble.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Acessórios",
+    "cor": "Multicolorido",
+    "em_estoque": true
   },
   {
     "nome": "Binóculo Astronômico 15x70 Profissional",
     "preco": 450.00,
     "descricao": "Binóculo de alta potência ótimo para observação celeste rápida, como crateras da lua e cometas.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Telescópios",
+    "cor": "Preto",
+    "em_estoque": true
   },
   {
     "nome": "Mousepad Grande Mapa Estelar Hemisfério Sul",
     "preco": 79.90,
     "descricao": "Mousepad estilo deskmat que cobre a mesa toda, com mapa das constelações do hemisfério sul.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Acessórios",
+    "cor": "Azul",
+    "em_estoque": true
   },
   {
     "nome": "Globo Terrestre Flutuante Magnético Led",
     "preco": 220.00,
     "descricao": "Globo de mesa que levita magneticamente na base em formato de C com iluminação em LED.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Decoração",
+    "cor": "Azul",
+    "em_estoque": true
   },
   {
     "nome": "Camiseta Observatório Telescópio James Webb",
     "preco": 62.00,
     "descricao": "Estampa em homenagem aos espelhos hexagonais dourados do telescópio espacial James Webb.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Vestuário",
+    "cor": "Preto",
+    "em_estoque": true
   },
   {
     "nome": "Projetor de Galáxias e Estrelas a Laser",
     "preco": 160.00,
     "descricao": "Projeta um céu estrelado dinâmico e nuvens de nebulosa pelo ambiente. Controlado por controle remoto.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg"
+    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "categoria": "Decoração",
+    "cor": "Branco",
+    "em_estoque": true
   }
 ]
