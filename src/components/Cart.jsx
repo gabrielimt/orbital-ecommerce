@@ -70,7 +70,13 @@ export default function Cart({ isOpen, onClose, cartItems = [], updateQuantity, 
                     <span className="text-white text-sm font-medium w-4 text-center">{item.quantidade}</span>
                     <button 
                       onClick={() => updateQuantity(item.nome, 1)}
-                      className="text-[#935AF0] hover:text-[#F897FE] transition-colors"
+                      disabled={item.quantidade >= item.estoqueOriginal}
+                      className={`transition-colors ${
+                        item.quantidade >= item.estoqueOriginal
+                          ? 'text-gray-600 cursor-not-allowed'
+                          : 'text-[#935AF0] hover:text-[#F897FE]'
+                      }`}
+                      title={item.quantidade >= item.estoqueOriginal ? "Estoque máximo atingido" : ""}
                     >
                       +
                     </button>

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 
 export default function ProductPage({ produto, onAddToCart, onBack }) {
-  // Estado local para controlar a quantidade antes de enviar para o carrinho
   const [quantidadeDesejada, setQuantidadeDesejada] = useState(1);
 
-  // Se a página for chamada sem um produto válido, não renderiza nada quebrado
   if (!produto) return null;
 
   const esgotado = !produto.em_estoque;
@@ -16,7 +14,6 @@ export default function ProductPage({ produto, onAddToCart, onBack }) {
   return (
     <div className="w-full min-h-[80vh] bg-[#03042C] p-6 md:p-12 text-gray-300">
       <div className="max-w-6xl mx-auto">
-        {/* Botão de Voltar */}
         <button 
           onClick={onBack}
           className="mb-8 flex items-center text-sm text-gray-400 hover:text-[#F897FE] transition-colors"
@@ -25,7 +22,6 @@ export default function ProductPage({ produto, onAddToCart, onBack }) {
         </button>
 
         <div className="flex flex-col md:flex-row gap-12">
-          {/* Coluna da Imagem */}
           <div className="w-full md:w-1/2">
             <div className={`border border-[#483ACC]/30 rounded-2xl overflow-hidden bg-[#03042C] aspect-square flex items-center justify-center ${esgotado ? 'grayscale opacity-60' : ''}`}>
                <img 
@@ -36,14 +32,11 @@ export default function ProductPage({ produto, onAddToCart, onBack }) {
             </div>
           </div>
 
-          {/* Coluna dos Detalhes */}
           <div className="w-full md:w-1/2 flex flex-col justify-center">
-            {/* Categoria */}
             <span className="text-xs uppercase tracking-widest text-[#F897FE] font-semibold mb-3">
               {produto.categoria}
             </span>
             
-            {/* Título e Preço */}
             <h1 className="text-4xl font-bold text-white mb-4">
               {produto.nome}
             </h1>
@@ -52,7 +45,6 @@ export default function ProductPage({ produto, onAddToCart, onBack }) {
               R$ {produto.preco.toFixed(2)}
             </p>
 
-            {/* Descrição */}
             <div className="mb-8 pb-8 border-b border-[#483ACC]/30">
               <h3 className="text-lg text-white font-semibold mb-2">Sobre o produto</h3>
               <p className="text-gray-400 leading-relaxed">
@@ -60,7 +52,6 @@ export default function ProductPage({ produto, onAddToCart, onBack }) {
               </p>
             </div>
 
-            {/* Área de Compra / Estoque */}
             {esgotado ? (
               <div className="p-4 rounded-xl border border-red-500/50 bg-red-500/10 text-red-400 text-center font-bold uppercase tracking-wide">
                 Indisponível no momento
@@ -70,7 +61,6 @@ export default function ProductPage({ produto, onAddToCart, onBack }) {
                 <div className="flex items-center gap-4">
                   <span className="text-sm font-medium text-gray-300">Quantidade:</span>
                   
-                  {/* Seletor de Quantidade estilo UI Kit */}
                   <div className="flex items-center border border-[#483ACC]/50 rounded-lg overflow-hidden bg-gray-900/50">
                     <button 
                       onClick={() => setQuantidadeDesejada(Math.max(1, quantidadeDesejada - 1))}
@@ -93,7 +83,6 @@ export default function ProductPage({ produto, onAddToCart, onBack }) {
                   </span>
                 </div>
 
-                {/* Botão Adicionar */}
                 <button 
                   onClick={handleAdd}
                   className="w-full py-4 rounded-full bg-[#935AF0] hover:bg-[#F897FE] text-white font-bold text-lg transition-all duration-300 shadow-[0_0_15px_rgba(147,90,240,0.3)] hover:shadow-[0_0_25px_rgba(248,151,254,0.5)] flex justify-center items-center gap-2"

@@ -17,10 +17,8 @@ export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
 
-  // NOVO ESTADO: Controla qual produto está sendo visualizado na tela de detalhes
   const [produtoSelecionado, setProdutoSelecionado] = useState(null);
 
-  // ATUALIZADO: Agora aceita a "quantidade" (padrão é 1 se vier da vitrine)
   const handleAddToCart = (produto, quantidade = 1) => {
     setCartItems(prev => {
       const itemExistente = prev.find(item => item.nome === produto.nome);
@@ -28,11 +26,19 @@ export default function App() {
       if (itemExistente) {
         return prev.map(item =>
           item.nome === produto.nome
-            ? { ...item, quantidade: item.quantidade + quantidade }
+            ? { 
+                ...item, 
+                quantidade: Math.min(item.quantidade + quantidade, item.estoqueOriginal) 
+              }
             : item
         );
       }
-      return [...prev, { ...produto, quantidade: quantidade }];
+      
+      return [...prev, { 
+        ...produto, 
+        estoqueOriginal: produto.quantidade, 
+        quantidade: quantidade 
+      }];
     });
     setIsCartOpen(true);
   };
@@ -85,7 +91,6 @@ export default function App() {
       
       <main className="flex-grow w-full max-w-7xl mx-auto py-8 px-4 md:px-0">
         
-        {/* RENDERIZAÇÃO CONDICIONAL: Mostra a página do produto ou a vitrine */}
         {produtoSelecionado ? (
           <ProductPage 
             produto={produtoSelecionado} 

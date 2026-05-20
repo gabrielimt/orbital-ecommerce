@@ -6,7 +6,6 @@ export default function ProductCard({ produtos, onAddToCart, onViewProduct }) {
           key={index} 
           className="product_card h-[360px] justify-between flex flex-col bg-[#03042C] border border-[#483ACC]/30 rounded-2xl p-4 transition-all duration-300 hover:shadow-[0_0_15px_rgba(248,151,254,0.15)]"
         >
-          {/* Container da Imagem (Clicável) */}
           <div 
             onClick={() => onViewProduct(product)}
             className="w-full aspect-square overflow-hidden rounded-xl mb-4 relative bg-[#172090]/20 cursor-pointer group"
@@ -24,7 +23,6 @@ export default function ProductCard({ produtos, onAddToCart, onViewProduct }) {
             )}
           </div>
 
-          {/* Container de Texto (Clicável) */}
           <div 
             onClick={() => onViewProduct(product)}
             className="flex flex-col flex-grow cursor-pointer"
@@ -38,7 +36,6 @@ export default function ProductCard({ produtos, onAddToCart, onViewProduct }) {
             </p>
           </div>
 
-          {/* Botão de Carrinho (Apenas adiciona) */}
           <button 
             onClick={() => onAddToCart(product)}
             disabled={!product.em_estoque}
