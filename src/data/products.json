@@ -63,7 +63,7 @@
     "nome": "Moletom Aglomerado de Galáxias Preto",
     "preco": 149.90,
     "descricao": "Moletom unissex flanelado de alta gramatura, projetado para oferecer o máximo de aquecimento e conforto nos dias frios de observação noturna. Apresenta uma impressão em toda a peça (full-print) de tirar o fôlego, exibindo as cores profundas e as luzes distantes de um imenso aglomerado de galáxias no fundo escuro.",
-    "imagem": "https://m.media-amazon.com/images/I/31O5+FCpJjL._AC_SY1000_.jpg",
+    "imagem": "public/moletom_aglomerado_de_galaxias_preto.png",
     "categoria": "Vestuário",
     "cor": "Preto",
     "em_estoque": true,

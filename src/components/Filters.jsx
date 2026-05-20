@@ -3,11 +3,32 @@ export default function Filters({
   precoMax, setPrecoMax, corSelecionada, setCorSelecionada, 
   apenasEstoque, setApenasEstoque, limparFiltros 
 }) {
+  
+  const coresDisponiveis = [
+    { nome: 'Preto', classBg: 'bg-black', classBorder: 'border-gray-600' },
+    { nome: 'Branco', classBg: 'bg-white', classBorder: 'border-gray-400' },
+    { nome: 'Azul Marinho', classBg: 'bg-[#172090]', classBorder: 'border-[#483ACC]' },
+    { nome: 'Azul', classBg: 'bg-blue-500', classBorder: 'border-blue-700' },
+    { nome: 'Prata', classBg: 'bg-gray-300', classBorder: 'border-gray-500' },
+    { nome: 'Cinza', classBg: 'bg-gray-500', classBorder: 'border-gray-700' },
+    { nome: 'Multicolorido', classBg: 'bg-gradient-to-r from-purple-500 via-pink-500 to-red-500', classBorder: 'border-transparent', activeBorder: 'border-white' },
+    { nome: 'Marrom', classBg: 'bg-[#8B4513]', classBorder: 'border-[#5C2E0B]' },
+    { nome: 'Transparente', classBg: 'bg-transparent border-dashed', classBorder: 'border-gray-400' },
+    { nome: 'Verde', classBg: 'bg-green-500', classBorder: 'border-green-700' },
+    { nome: 'Vermelho', classBg: 'bg-red-500', classBorder: 'border-red-700' }
+  ];
+
   return (
     <aside className="filtros w-full md:w-64 p-6 bg-[#03042C] border-r border-[#483ACC]/30 min-h-screen flex flex-col gap-8 font-sans">
       
       <div>
         <h2 className="text-white font-semibold text-xl mb-1">Filtros</h2>
+        <button 
+          onClick={limparFiltros}
+          className="text-[#F897FE] text-xs hover:underline mt-1"
+        >
+          Limpar Filtros
+        </button>
       </div>
 
       <div className="flex flex-col gap-3">
@@ -50,31 +71,21 @@ export default function Filters({
       <div className="flex flex-col gap-3">
         <h3 className="text-white text-sm font-medium border-b border-[#483ACC]/30 pb-2">Cores</h3>
         <div className="flex flex-wrap gap-2">
-          <button 
-            onClick={() => setCorSelecionada(corSelecionada === 'Preto' ? '' : 'Preto')}
-            className={`w-6 h-6 rounded-full bg-black border ${corSelecionada === 'Preto' ? 'border-[#F897FE] scale-125' : 'border-gray-600'} hover:scale-110 transition-transform`} 
-            title="Preto"
-          ></button>
-          <button 
-            onClick={() => setCorSelecionada(corSelecionada === 'Branco' ? '' : 'Branco')}
-            className={`w-6 h-6 rounded-full bg-white border ${corSelecionada === 'Branco' ? 'border-[#F897FE] scale-125' : 'border-gray-400'} hover:scale-110 transition-transform`} 
-            title="Branco"
-          ></button>
-          <button 
-            onClick={() => setCorSelecionada(corSelecionada === 'Azul Marinho' ? '' : 'Azul Marinho')}
-            className={`w-6 h-6 rounded-full bg-[#172090] border ${corSelecionada === 'Azul Marinho' ? 'border-[#F897FE] scale-125' : 'border-[#483ACC]'} hover:scale-110 transition-transform`} 
-            title="Azul Marinho"
-          ></button>
-          <button 
-            onClick={() => setCorSelecionada(corSelecionada === 'Prata/Cinza' ? '' : 'Prata/Cinza')}
-            className={`w-6 h-6 rounded-full bg-gray-400 border ${corSelecionada === 'Prata/Cinza' ? 'border-[#F897FE] scale-125' : 'border-gray-500'} hover:scale-110 transition-transform`} 
-            title="Prata/Cinza"
-          ></button>
-          <button 
-            onClick={() => setCorSelecionada(corSelecionada === 'Multicolorido/Nebulosa' ? '' : 'Multicolorido/Nebulosa')}
-            className={`w-6 h-6 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 border ${corSelecionada === 'Multicolorido/Nebulosa' ? 'border-white scale-125' : 'border-transparent'} hover:scale-110 transition-transform`} 
-            title="Multicolorido/Nebulosa"
-          ></button>
+          {coresDisponiveis.map((cor) => {
+            const isSelected = corSelecionada === cor.nome;
+            const borderStyle = isSelected 
+              ? `${cor.activeBorder || 'border-[#F897FE]'} scale-125` 
+              : cor.classBorder;
+            
+            return (
+              <button 
+                key={cor.nome}
+                onClick={() => setCorSelecionada(isSelected ? '' : cor.nome)}
+                className={`w-6 h-6 rounded-full border-2 ${cor.classBg} ${borderStyle} hover:scale-110 transition-transform`} 
+                title={cor.nome}
+              ></button>
+            );
+          })}
         </div>
       </div>
 
