@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import productsData from './data/products.json'; 
-import Header from './components/Header'
+import productsData from './data/products.json';
+import Header from './components/Header';
 import Filters from './components/Filters';
 import ProductCard from './components/ProductCard';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import Cart from './components/Cart';
 
 export default function App() {
   const [categorias, setCategorias] = useState([]);
@@ -12,8 +13,44 @@ export default function App() {
   const [corSelecionada, setCorSelecionada] = useState('');
   const [apenasEstoque, setApenasEstoque] = useState(false);
 
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
+
+  const handleAddToCart = (produto) => {
+    setCartItems(prev => {
+      const itemExistente = prev.find(item => item.nome === produto.nome);
+      
+      if (itemExistente) {
+        return prev.map(item =>
+          item.nome === produto.nome
+            ? { ...item, quantidade: item.quantidade + 1 }
+            : item
+        );
+      }
+      return [...prev, { ...produto, quantidade: 1 }];
+    });
+    setIsCartOpen(true);
+  };
+
+  const updateQuantity = (nome, delta) => {
+    setCartItems(prev => {
+      return prev.map(item => {
+        if (item.nome === nome) {
+          return { ...item, quantidade: item.quantidade + delta };
+        }
+        return item;
+      }).filter(item => item.quantidade > 0);
+    });
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
+  const totalItemsInCart = cartItems.reduce((acc, item) => acc + item.quantidade, 0);
+
   const toggleCategoria = (cat) => {
-    setCategorias(prev => 
+    setCategorias(prev =>
       prev.includes(cat) ? prev.filter(c => c !== cat) : [...prev, cat]
     );
   };
@@ -37,8 +74,10 @@ export default function App() {
   });
 
   return (
-    <div className="bg-[#03042C] min-h-screen text-white font-sans">
-      <Header />
+    <div className="bg-[#03042C] min-h-screen text-white font-sans relative">
+      
+      <Header onOpenCart={() => setIsCartOpen(true)} cartCount={totalItemsInCart} />
+      
       <main className="flex flex-col md:flex-row w-full max-w-7xl mx-auto">
         <div className="w-full md:w-64 flex-shrink-0">
           <Filters 
@@ -56,10 +95,19 @@ export default function App() {
           />
         </div>
         <div className="flex-grow">
-          <ProductCard produtos={produtosFiltrados} />
+          <ProductCard produtos={produtosFiltrados} onAddToCart={handleAddToCart} />
         </div>
       </main>
+
       <Footer />
+
+      <Cart 
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cartItems={cartItems}
+        updateQuantity={updateQuantity}
+        clearCart={clearCart}
+      />
     </div>
   );
 }

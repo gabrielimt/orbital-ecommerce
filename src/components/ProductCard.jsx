@@ -1,4 +1,4 @@
-export default function ProductCard({ produtos }) {
+export default function ProductCard({ produtos, onAddToCart }) {
   return (
     <section className="products grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-8 bg-[#03042C] min-h-screen font-sans">
       {produtos.map((product, index) => (
@@ -32,6 +32,7 @@ export default function ProductCard({ produtos }) {
           </div>
 
           <button 
+            onClick={() => onAddToCart(product)}
             disabled={!product.em_estoque}
             className={`w-full text-sm font-medium py-2.5 rounded-full transition-colors duration-300 ${
               product.em_estoque 
