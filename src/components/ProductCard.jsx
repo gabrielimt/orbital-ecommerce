@@ -1,16 +1,20 @@
-export default function ProductCard({ produtos, onAddToCart }) {
+export default function ProductCard({ produtos, onAddToCart, onViewProduct }) {
   return (
-    <section className="products grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-8 bg-[#03042C] min-h-screen font-sans">
+    <section className="products grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4 md:p-8 bg-[#03042C] min-h-screen font-sans">
       {produtos.map((product, index) => (
         <article 
           key={index} 
           className="product_card h-[360px] justify-between flex flex-col bg-[#03042C] border border-[#483ACC]/30 rounded-2xl p-4 transition-all duration-300 hover:shadow-[0_0_15px_rgba(248,151,254,0.15)]"
         >
-          <div className="w-full aspect-square overflow-hidden rounded-xl mb-4 relative bg-[#172090]/20">
+          {/* Container da Imagem (Clicável) */}
+          <div 
+            onClick={() => onViewProduct(product)}
+            className="w-full aspect-square overflow-hidden rounded-xl mb-4 relative bg-[#172090]/20 cursor-pointer group"
+          >
             <img 
               src={product.imagem} 
               alt={product.nome} 
-              className={`w-full h-full object-cover mix-blend-lighten transition-all duration-300 ${!product.em_estoque ? 'grayscale opacity-50' : ''}`}
+              className={`w-full h-full object-cover mix-blend-lighten transition-transform duration-500 group-hover:scale-110 ${!product.em_estoque ? 'grayscale opacity-50' : ''}`}
             />
 
             {!product.em_estoque && (
@@ -18,11 +22,14 @@ export default function ProductCard({ produtos, onAddToCart }) {
                 Esgotado
               </span>
             )}
-
           </div>
 
-          <div className="flex flex-col flex-grow">
-            <h3 className="text-white font-semibold text-base leading-tight mb-2 line-clamp-1">
+          {/* Container de Texto (Clicável) */}
+          <div 
+            onClick={() => onViewProduct(product)}
+            className="flex flex-col flex-grow cursor-pointer"
+          >
+            <h3 className="text-white font-semibold text-base leading-tight mb-2 line-clamp-1 hover:text-[#F897FE] transition-colors">
               {product.nome}
             </h3>
             
@@ -31,6 +38,7 @@ export default function ProductCard({ produtos, onAddToCart }) {
             </p>
           </div>
 
+          {/* Botão de Carrinho (Apenas adiciona) */}
           <button 
             onClick={() => onAddToCart(product)}
             disabled={!product.em_estoque}

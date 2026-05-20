@@ -5,6 +5,7 @@ import Filters from './components/Filters';
 import ProductCard from './components/ProductCard';
 import Footer from './components/Footer';
 import Cart from './components/Cart';
+import ProductPage from './components/ProductPage';
 
 export default function App() {
   const [categorias, setCategorias] = useState([]);
@@ -16,18 +17,22 @@ export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
 
-  const handleAddToCart = (produto) => {
+  // NOVO ESTADO: Controla qual produto está sendo visualizado na tela de detalhes
+  const [produtoSelecionado, setProdutoSelecionado] = useState(null);
+
+  // ATUALIZADO: Agora aceita a "quantidade" (padrão é 1 se vier da vitrine)
+  const handleAddToCart = (produto, quantidade = 1) => {
     setCartItems(prev => {
       const itemExistente = prev.find(item => item.nome === produto.nome);
       
       if (itemExistente) {
         return prev.map(item =>
           item.nome === produto.nome
-            ? { ...item, quantidade: item.quantidade + 1 }
+            ? { ...item, quantidade: item.quantidade + quantidade }
             : item
         );
       }
-      return [...prev, { ...produto, quantidade: 1 }];
+      return [...prev, { ...produto, quantidade: quantidade }];
     });
     setIsCartOpen(true);
   };
@@ -74,29 +79,46 @@ export default function App() {
   });
 
   return (
-    <div className="bg-[#03042C] min-h-screen text-white font-sans relative">
+    <div className="bg-[#03042C] min-h-screen text-white font-sans relative flex flex-col">
       
       <Header onOpenCart={() => setIsCartOpen(true)} cartCount={totalItemsInCart} />
       
-      <main className="flex flex-col md:flex-row w-full max-w-7xl mx-auto">
-        <div className="w-full md:w-64 flex-shrink-0">
-          <Filters 
-            categorias={categorias}
-            toggleCategoria={toggleCategoria}
-            precoMin={precoMin}
-            setPrecoMin={setPrecoMin}
-            precoMax={precoMax}
-            setPrecoMax={setPrecoMax}
-            corSelecionada={corSelecionada}
-            setCorSelecionada={setCorSelecionada}
-            apenasEstoque={apenasEstoque}
-            setApenasEstoque={setApenasEstoque}
-            limparFiltros={limparFiltros}
+      <main className="flex-grow w-full max-w-7xl mx-auto py-8 px-4 md:px-0">
+        
+        {/* RENDERIZAÇÃO CONDICIONAL: Mostra a página do produto ou a vitrine */}
+        {produtoSelecionado ? (
+          <ProductPage 
+            produto={produtoSelecionado} 
+            onAddToCart={handleAddToCart} 
+            onBack={() => setProdutoSelecionado(null)} 
           />
-        </div>
-        <div className="flex-grow">
-          <ProductCard produtos={produtosFiltrados} onAddToCart={handleAddToCart} />
-        </div>
+        ) : (
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="w-full md:w-64 flex-shrink-0">
+              <Filters 
+                categorias={categorias}
+                toggleCategoria={toggleCategoria}
+                precoMin={precoMin}
+                setPrecoMin={setPrecoMin}
+                precoMax={precoMax}
+                setPrecoMax={setPrecoMax}
+                corSelecionada={corSelecionada}
+                setCorSelecionada={setCorSelecionada}
+                apenasEstoque={apenasEstoque}
+                setApenasEstoque={setApenasEstoque}
+                limparFiltros={limparFiltros}
+              />
+            </div>
+            <div className="flex-grow">
+              <ProductCard 
+                produtos={produtosFiltrados} 
+                onAddToCart={handleAddToCart} 
+                onViewProduct={setProdutoSelecionado} 
+              />
+            </div>
+          </div>
+        )}
+
       </main>
 
       <Footer />
