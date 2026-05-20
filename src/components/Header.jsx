@@ -10,16 +10,6 @@ export default function Header({ onOpenCart, cartCount }) {
                 </h1>
             </div>
 
-            <nav id="navegation" className="hidden md:block">
-                <ul className="flex items-center gap-8 text-sm font-medium">
-                    <li><a href="#" className="text-gray-300 hover:text-[#F897FE] transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(248,151,254,0.6)]">Início</a></li>
-                    <li><a href="#" className="text-gray-300 hover:text-[#F897FE] transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(248,151,254,0.6)]">Roupas</a></li>
-                    <li><a href="#" className="text-gray-300 hover:text-[#F897FE] transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(248,151,254,0.6)]">Acessórios</a></li>
-                    <li><a href="#" className="text-gray-300 hover:text-[#F897FE] transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(248,151,254,0.6)]">Telescópios</a></li>
-                    <li><a href="#" className="text-gray-300 hover:text-[#F897FE] transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(248,151,254,0.6)]">Decoração</a></li>
-                </ul>
-            </nav>
-
             <div id="cart" onClick={onOpenCart} className="relative cursor-pointer text-gray-300 hover:text-[#F897FE] transition-colors duration-300">
                 <CiShoppingCart size={32} />
                 {cartCount > 0 && (
